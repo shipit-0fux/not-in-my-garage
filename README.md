@@ -13,6 +13,7 @@ A simple but powerful tool that automatically hides listings for vehicles you ne
   - Cars.com
   - AutoTrader.com
   - Carvana.com
+  - Carmax.com
   - CarFax.com
   - CarGurus.com
 - Customizable block list
