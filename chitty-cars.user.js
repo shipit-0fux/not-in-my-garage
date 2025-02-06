@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Car Listing Filter
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      v0.0.3
 // @description  Hide specific car makes/models from listing results
 // @author       shipit@zerofux.dev
 // @match        *://www.autotrader.com/*
