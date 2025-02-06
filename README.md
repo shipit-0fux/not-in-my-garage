@@ -22,8 +22,7 @@ A simple but powerful tool that automatically hides listings for vehicles you ne
 
 ## Installation
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser
-2. Click [here](link-to-raw-script) to install the script
-3. The script will automatically activate when you visit supported car shopping sites
+TODO:  finish this bit
 
 ## Configuration
 Edit the `blockedModels` array in the script settings to customize which vehicles you want to hide:
