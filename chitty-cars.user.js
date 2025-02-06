@@ -40,30 +40,30 @@
 
     // Site-specific configuration
     const siteConfig = {
-        'www.cars.com': {
-            container: '.vehicle-card',
-            textElement: '.vehicle-card-link'
-        },
-        'www.carfax.com': {
-            container: '.srp-list-item',
-            textElement: '.srp-list-item__header'
-        },
-        'www.carvana.com': {
-            container: '[data-qa="result-tile"]', 
-            textElement: '[data-qa="make-model"]' 
-        },
         'www.autotrader.com': {
             container: '.inventory-listing',
             textElement: '[data-cmp="subheading"]',    
         }, 
-        'www.carmax.com': {
-            container: 'article.car-tile',
-            textElement: 'div.scct--make-model-container a.scct--make-model-info-link',
-        },        
+        'www.carfax.com': {
+            container: '.srp-list-item',
+            textElement: '.srp-list-item__header'
+        },
         'www.cargurus.com': {
             container: '[data-testid="srp-listing-tile"]', 
             textElement: '[data-testid="srp-tile-listing-title"] h4',
             additionalTextElements: ['dl dd'] 
+        },
+        'www.carmax.com': {
+            container: 'article.car-tile',
+            textElement: 'div.scct--make-model-container a.scct--make-model-info-link'
+        }, 
+        'www.cars.com': {
+            container: '.vehicle-card',
+            textElement: '.vehicle-card-link'
+        },
+        'www.carvana.com': {
+            container: '[data-qa="result-tile"]', 
+            textElement: '[data-qa="make-model"]' 
         }
     };
 
@@ -80,10 +80,9 @@
 
         document.querySelectorAll(config.container).forEach(card => {
             let shouldHide = false;
-
             log("Checking card:", card);
 
-            // Check primary title element
+            // Check primary element
             const titleElement = card.querySelector(config.textElement);
             if (titleElement) {
                 const titleText = titleElement.textContent.toLowerCase();
@@ -115,7 +114,6 @@
 
             if (shouldHide) {
                 log("Hiding element:", card);
-                // Use '!important' to ensure the style is applied
                 card.style.setProperty('display', 'none', 'important');
                 // Alternative
                 // card.remove();
